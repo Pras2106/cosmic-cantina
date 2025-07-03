@@ -21,7 +21,7 @@ const Landing: React.FC = () => {
     <div className="min-h-screen cosmic-gradient relative overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Floating Particles */}
+        {/* Floating Particles - No Green */}
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
@@ -31,10 +31,10 @@ const Landing: React.FC = () => {
               top: `${Math.random() * 100}%`,
               width: `${Math.random() * 3 + 1}px`,
               height: `${Math.random() * 3 + 1}px`,
-              background: i % 3 === 0 ? '#007AFF' : i % 3 === 1 ? '#34C759' : '#FF9500',
+              background: i % 3 === 0 ? '#007AFF' : i % 3 === 1 ? '#5856D6' : '#FF9500',
               borderRadius: '50%',
               animationDelay: `${Math.random() * 10}s`,
-              opacity: 0.4,
+              opacity: 0.3,
               filter: 'blur(0.5px)',
             }}
           />
@@ -42,21 +42,21 @@ const Landing: React.FC = () => {
         
         {/* Parallax Background Layers */}
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-15"
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 122, 255, 0.1) 0%, transparent 50%)`,
+            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 122, 255, 0.08) 0%, transparent 50%)`,
             transition: 'background 0.3s ease',
           }}
         />
       </div>
 
       {/* Header */}
-      <header className="glass-morphism border-b border-white/20 relative z-10">
+      <header className="glass-morphism border-b border-white/15 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center group">
-              <div className="w-12 h-12 glass-morphism rounded-xl flex items-center justify-center cosmic-glow mr-4 group-hover:scale-110 transition-transform duration-300">
-                <img src="/site-icon.png" alt="Cosmic Cantina" className="w-8 h-8 rounded-lg" />
+              <div className="w-16 h-16 flex items-center justify-center cosmic-glow mr-4 group-hover:scale-110 transition-transform duration-300 icon-glow">
+                <img src="/site-icon.png" alt="Cosmic Cantina" className="w-12 h-12 rounded-full object-cover" />
               </div>
               <div>
                 <span className="text-2xl sm:text-3xl font-bold cosmic-text tracking-wider">Cosmic Cantina</span>
@@ -71,19 +71,19 @@ const Landing: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 relative z-10">
         <div className="text-center mb-12 sm:mb-20">
           <div className="mb-8">
-            <div className="inline-flex items-center space-x-2 glass-morphism px-6 py-3 rounded-full border border-white/30 mb-8 hover-lift cosmic-glow">
+            <div className="inline-flex items-center space-x-2 glass-morphism px-6 py-3 rounded-full border border-white/20 mb-8 hover-lift cosmic-glow">
               <Star className="w-5 h-5 text-blue-400" />
               <span className="text-blue-300 text-sm font-medium">Next-Generation Food Ordering</span>
               <Sparkles className="w-5 h-5 text-purple-400" />
             </div>
           </div>
           
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6 tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 tracking-tight leading-tight">
             Skip the Queue,<br />
-            <span className="cosmic-text text-4xl sm:text-6xl md:text-7xl">Order Smart</span>
+            <span className="cosmic-text text-4xl sm:text-5xl md:text-6xl">Order Smart</span>
           </h1>
           
-          <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-6 sm:mb-10 leading-relaxed px-4">
+          <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6 sm:mb-10 leading-relaxed px-4">
             Experience premium cuisine with cutting-edge technology. Pre-order your favorite meals 
             and skip the lunch rush with our intelligent ordering system.
           </p>
@@ -94,7 +94,7 @@ const Landing: React.FC = () => {
               <span className="text-sm font-medium text-white">Instant Ordering</span>
             </div>
             <div className="flex items-center space-x-3 glass-card px-5 py-3 rounded-xl hover-lift">
-              <Shield className="w-5 h-5 text-green-400" />
+              <Shield className="w-5 h-5 text-purple-400" />
               <span className="text-sm font-medium text-white">Premium Quality</span>
             </div>
             <div className="flex items-center space-x-3 glass-card px-5 py-3 rounded-xl hover-lift">
@@ -109,7 +109,7 @@ const Landing: React.FC = () => {
           {/* Student Card */}
           <Link to="/auth/student" className="group block">
             <div className="glass-card rounded-2xl p-8 hover-lift transition-all duration-500 relative overflow-hidden interactive-card gradient-border">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/15 to-purple-500/15 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
               <div className="relative z-10">
                 <div className="flex items-center justify-center w-16 sm:w-20 h-16 sm:h-20 glass-morphism rounded-2xl mb-6 sm:mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 cosmic-glow">
                   <Users className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
@@ -131,9 +131,9 @@ const Landing: React.FC = () => {
           {/* Staff Card */}
           <Link to="/auth/staff" className="group block">
             <div className="glass-card rounded-2xl p-8 hover-lift transition-all duration-500 relative overflow-hidden interactive-card gradient-border">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-500/15 to-orange-500/15 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
               <div className="relative z-10">
-                <div className="flex items-center justify-center w-16 sm:w-20 h-16 sm:h-20 glass-morphism rounded-2xl mb-6 sm:mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" style={{ boxShadow: '0 0 20px rgba(255, 149, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)' }}>
+                <div className="flex items-center justify-center w-16 sm:w-20 h-16 sm:h-20 glass-morphism rounded-2xl mb-6 sm:mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" style={{ boxShadow: '0 0 20px rgba(255, 149, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)' }}>
                   <ChefHat className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-yellow-300 transition-colors">Staff Portal</h3>
@@ -158,7 +158,7 @@ const Landing: React.FC = () => {
               icon: Clock,
               title: "Time Efficiency",
               description: "Advanced ordering system eliminates waiting times during peak hours.",
-              color: "green",
+              color: "purple",
               delay: "0s"
             },
             {
@@ -178,11 +178,11 @@ const Landing: React.FC = () => {
           ].map((feature, index) => (
             <div key={index} className="text-center group" style={{ animationDelay: feature.delay }}>
               <div className={`w-14 h-14 sm:w-16 sm:h-16 glass-morphism rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 floating-element`} style={{ 
-                boxShadow: feature.color === 'green' 
-                  ? '0 0 20px rgba(52, 199, 89, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+                boxShadow: feature.color === 'purple' 
+                  ? '0 0 20px rgba(88, 86, 214, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                   : feature.color === 'blue'
-                  ? '0 0 20px rgba(0, 122, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-                  : '0 0 20px rgba(255, 149, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+                  ? '0 0 20px rgba(0, 122, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                  : '0 0 20px rgba(255, 149, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}>
                 <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
@@ -194,11 +194,11 @@ const Landing: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="inline-flex items-center space-x-3 glass-morphism px-6 sm:px-8 py-3 sm:py-4 rounded-2xl border border-white/30 hover-lift cosmic-glow">
+          <div className="inline-flex items-center space-x-3 glass-morphism px-6 sm:px-8 py-3 sm:py-4 rounded-2xl border border-white/20 hover-lift cosmic-glow">
             <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
             <p className="text-gray-300 text-base sm:text-lg">
               <span className="text-blue-400 font-medium">Ready to experience the future?</span> 
-              <span className="text-green-400 font-medium ml-2">Choose your portal above!</span>
+              <span className="text-purple-400 font-medium ml-2">Choose your portal above!</span>
             </p>
             <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
           </div>
