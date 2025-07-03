@@ -48,30 +48,30 @@ const StaffAuth: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen cosmic-gradient flex items-center justify-center p-4">
+    <div className="min-h-screen vibrant-gradient flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center text-gray-400 hover:text-yellow-300 mb-4 transition-colors hover-lift">
+          <Link to="/" className="inline-flex items-center text-gray-400 hover:text-yellow-300 mb-6 transition-all duration-300 hover-lift">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <div className="flex items-center justify-center mb-4">
-            <div className="w-12 h-12 glass-morphism rounded-xl flex items-center justify-center mr-3" style={{ boxShadow: '0 0 20px rgba(245, 158, 11, 0.4)' }}>
-              <ChefHat className="w-6 h-6 text-white" />
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-14 h-14 glass-morphism rounded-xl flex items-center justify-center mr-4 yellow-glow hover:scale-110 transition-transform duration-300">
+              <ChefHat className="w-7 h-7 text-white" />
             </div>
-            <span className="text-2xl font-bold text-white">Staff Portal</span>
+            <span className="text-3xl font-bold text-white">Staff Portal</span>
           </div>
-          <p className="text-gray-300">
-            {isLogin ? 'Welcome back, Master Chef! Sign in to your account' : 'Join the Team - Create your staff account'}
+          <p className="text-gray-300 text-lg">
+            {isLogin ? 'Welcome back, Chef! Sign in to your account' : 'Join the Team - Create your staff account'}
           </p>
         </div>
 
         {/* Form */}
-        <div className="glass-morphism-strong rounded-2xl p-8">
+        <div className="glass-morphism-strong rounded-2xl p-8 border border-yellow-500/30">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
-              <div className="toast-error rounded-lg p-3">
+              <div className="toast-error rounded-lg p-4">
                 <p className="text-sm">{error}</p>
               </div>
             )}
@@ -88,7 +88,7 @@ const StaffAuth: React.FC = () => {
                     required
                     value={formData.fullName}
                     onChange={(e) => setFormData(prev => ({ ...prev, fullName: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -106,7 +106,7 @@ const StaffAuth: React.FC = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                  className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
                   placeholder="Enter your email"
                 />
               </div>
@@ -124,7 +124,7 @@ const StaffAuth: React.FC = () => {
                     required
                     value={formData.mobileNumber}
                     onChange={(e) => setFormData(prev => ({ ...prev, mobileNumber: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your mobile number"
                   />
                 </div>
@@ -142,7 +142,7 @@ const StaffAuth: React.FC = () => {
                   required
                   value={formData.password}
                   onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-                  className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
                   placeholder="Enter your password"
                 />
               </div>
@@ -160,7 +160,7 @@ const StaffAuth: React.FC = () => {
                     required
                     value={formData.confirmPassword}
                     onChange={(e) => setFormData(prev => ({ ...prev, confirmPassword: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Confirm your password"
                   />
                 </div>
@@ -170,8 +170,8 @@ const StaffAuth: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full ios-button text-white py-3 px-4 rounded-lg font-medium disabled:opacity-50 flex items-center justify-center space-x-2"
-              style={{ boxShadow: '0 0 20px rgba(245, 158, 11, 0.4)' }}
+              className="w-full vibrant-button text-white py-3 px-4 rounded-lg font-medium disabled:opacity-50 flex items-center justify-center space-x-2 yellow-glow"
+              style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)' }}
             >
               <Crown className="w-5 h-5" />
               <span>{loading ? 'Please wait...' : isLogin ? 'Sign In' : 'Join the Team'}</span>
