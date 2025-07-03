@@ -133,6 +133,19 @@ body {
     inset 0 -1px 0 rgba(255, 255, 255, 0.06);
 }
 
+/* Enhanced Hover Effects for Portal Cards */
+.enhanced-hover {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.enhanced-hover:hover {
+  transform: translateY(-12px) scale(1.03) rotateX(2deg);
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.9),
+    0 0 60px rgba(0, 122, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
 /* iOS 26 Style Buttons - Darker */
 .ios-button {
   background: linear-gradient(135deg, 
@@ -184,29 +197,53 @@ body {
   transform: translateY(-1px) scale(1.02);
 }
 
-/* Vista Aero Glass Input - Darker */
+/* Enhanced Auth Form Styles */
+.auth-form-container {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.12) 0%, 
+    rgba(255, 255, 255, 0.06) 50%, 
+    rgba(255, 255, 255, 0.03) 100%);
+  backdrop-filter: blur(60px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.auth-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 35px 80px rgba(0, 0, 0, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Vista Aero Glass Input - Enhanced */
 .glass-input {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.04) 0%, 
-    rgba(255, 255, 255, 0.02) 100%);
+    rgba(255, 255, 255, 0.06) 0%, 
+    rgba(255, 255, 255, 0.03) 100%);
   backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
   color: #ffffff;
   box-shadow: 
     inset 0 2px 4px rgba(0, 0, 0, 0.4),
-    0 1px 0 rgba(255, 255, 255, 0.06);
+    0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .glass-input:focus {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.06) 0%, 
-    rgba(255, 255, 255, 0.03) 100%);
-  border-color: rgba(0, 122, 255, 0.5);
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.04) 100%);
+  border-color: rgba(0, 122, 255, 0.6);
   box-shadow: 
-    0 0 20px rgba(0, 122, 255, 0.3),
+    0 0 25px rgba(0, 122, 255, 0.4),
     inset 0 2px 4px rgba(0, 0, 0, 0.4),
-    0 1px 0 rgba(255, 255, 255, 0.08);
+    0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
 }
 
 .glass-input::placeholder {
@@ -352,7 +389,7 @@ body {
   }
 }
 
-/* Enhanced Glow Effects - No Green */
+/* Enhanced Glow Effects */
 .cosmic-glow {
   box-shadow: 
     0 0 25px rgba(0, 122, 255, 0.4),
@@ -400,6 +437,44 @@ body {
   background: radial-gradient(circle, 
     rgba(0, 122, 255, 0.6) 0%, 
     rgba(0, 122, 255, 0.3) 50%, 
+    transparent 80%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Larger Icon Glow for Landing Page */
+.icon-glow-large {
+  position: relative;
+  border-radius: 50% !important;
+  overflow: visible !important;
+}
+
+.icon-glow-large::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  background: radial-gradient(circle, 
+    rgba(0, 122, 255, 0.5) 0%, 
+    rgba(0, 122, 255, 0.3) 40%, 
+    transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.icon-glow-large::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: radial-gradient(circle, 
+    rgba(0, 122, 255, 0.7) 0%, 
+    rgba(0, 122, 255, 0.4) 50%, 
     transparent 80%);
   border-radius: 50%;
   z-index: -1;

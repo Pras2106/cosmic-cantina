@@ -18,8 +18,8 @@ const Header: React.FC<HeaderProps> = ({ title, showCart = false, cartCount = 0,
         <div className="flex justify-between items-center h-18 py-4">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center group">
-              <div className="w-14 h-14 flex items-center justify-center cosmic-glow mr-4 group-hover:scale-110 transition-transform duration-300 icon-glow">
-                <img src="/site-icon.png" alt="Cosmic Cantina" className="w-10 h-10 rounded-full object-cover" />
+              <div className="w-16 h-16 flex items-center justify-center cosmic-glow mr-4 group-hover:scale-110 transition-transform duration-300 icon-glow">
+                <img src="/site-icon.png" alt="Cosmic Cantina" className="w-12 h-12 rounded-full object-cover" />
               </div>
               <div>
                 <span className="text-xl font-bold cosmic-text tracking-wide">Cosmic Cantina</span>

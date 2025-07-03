@@ -50,27 +50,27 @@ const StudentAuth: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen vibrant-gradient flex items-center justify-center p-4">
+    <div className="min-h-screen cosmic-gradient flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center text-gray-400 hover:text-indigo-300 mb-6 transition-all duration-300 hover-lift">
+          <Link to="/" className="inline-flex items-center text-gray-400 hover:text-blue-300 mb-6 transition-all duration-300 hover-lift">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
           <div className="flex items-center justify-center mb-6">
-            <div className="w-14 h-14 glass-morphism rounded-xl flex items-center justify-center mr-4 vibrant-glow hover:scale-110 transition-transform duration-300">
-              <Users className="w-7 h-7 text-white" />
+            <div className="w-16 h-16 glass-morphism rounded-xl flex items-center justify-center mr-4 cosmic-glow hover:scale-110 transition-transform duration-300">
+              <Users className="w-8 h-8 text-white" />
             </div>
             <span className="text-3xl font-bold text-white">Student Portal</span>
           </div>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg leading-relaxed">
             {isLogin ? 'Welcome back! Sign in to your account' : 'Join the Digital Community - Create your student account'}
           </p>
         </div>
 
         {/* Form */}
-        <div className="glass-morphism-strong rounded-2xl p-8 border border-indigo-500/30">
+        <div className="auth-form-container rounded-2xl p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
               <div className="toast-error rounded-lg p-4">
@@ -90,7 +90,7 @@ const StudentAuth: React.FC = () => {
                     required
                     value={formData.fullName}
                     onChange={(e) => setFormData(prev => ({ ...prev, fullName: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -109,7 +109,7 @@ const StudentAuth: React.FC = () => {
                     required
                     value={formData.registrationNumber}
                     onChange={(e) => setFormData(prev => ({ ...prev, registrationNumber: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your registration number"
                   />
                 </div>
@@ -127,7 +127,7 @@ const StudentAuth: React.FC = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                  className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                   placeholder="Enter your email"
                 />
               </div>
@@ -145,7 +145,7 @@ const StudentAuth: React.FC = () => {
                     required
                     value={formData.mobileNumber}
                     onChange={(e) => setFormData(prev => ({ ...prev, mobileNumber: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your mobile number"
                   />
                 </div>
@@ -163,7 +163,7 @@ const StudentAuth: React.FC = () => {
                   required
                   value={formData.password}
                   onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-                  className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                   placeholder="Enter your password"
                 />
               </div>
@@ -181,7 +181,7 @@ const StudentAuth: React.FC = () => {
                     required
                     value={formData.confirmPassword}
                     onChange={(e) => setFormData(prev => ({ ...prev, confirmPassword: e.target.value }))}
-                    className="w-full pl-10 pr-4 py-3 vibrant-input rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Confirm your password"
                   />
                 </div>
@@ -191,7 +191,7 @@ const StudentAuth: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full vibrant-button text-white py-3 px-4 rounded-lg font-medium disabled:opacity-50 flex items-center justify-center space-x-2"
+              className="w-full ios-button text-white py-3 px-4 rounded-lg font-medium disabled:opacity-50 flex items-center justify-center space-x-2 cosmic-glow"
             >
               <Shield className="w-5 h-5" />
               <span>{loading ? 'Please wait...' : isLogin ? 'Sign In' : 'Join the Community'}</span>
@@ -201,7 +201,7 @@ const StudentAuth: React.FC = () => {
           <div className="mt-6 text-center">
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-indigo-400 hover:text-indigo-300 font-medium transition-colors"
+              className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
             >
               {isLogin ? "Don't have an account? Join the Community" : "Already have an account? Sign in"}
             </button>
